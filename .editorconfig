@@ -1,0 +1,11 @@
+root = true
+
+[*]
+trim_trailing_whitespace = true
+insert_final_newline = false
+charset = utf-8
+indent_style = space
+
+[*.{html,js,css,json,vue,java}]
+indent_size = 4
+tab_width = 4

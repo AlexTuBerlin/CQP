@@ -1,0 +1,139 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {},
+    "title": "Root",
+    "type": "object",
+    "required": [
+        "version",
+        "defaultSchema",
+        "schemas"
+    ],
+    "properties": {
+        "version": {
+            "$id": "#root/version",
+            "title": "Version",
+            "type": "string",
+            "pattern": "^.*$"
+        },
+        "defaultSchema": {
+            "$id": "#root/defaultSchema",
+            "title": "Defaultschema",
+            "type": "string",
+            "pattern": "^.*$"
+        },
+        "schemas": {
+            "$id": "#root/schemas",
+            "title": "Schemas",
+            "type": "array",
+            "items":{
+                "$id": "#root/schemas/items",
+                "title": "Items",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "$id": "#root/schemas/items/name",
+                        "title": "Name",
+                        "type": "string",
+                        "pattern": "^.*$"
+                    },
+                    "type": {
+                        "$id": "#root/schemas/items/type",
+                        "title": "Type",
+                        "type": "string",
+                        "pattern": "^.*$"
+                    },
+                    "factory": {
+                        "$id": "#root/schemas/items/factory",
+                        "title": "Factory",
+                        "type": "string",
+                        "pattern": "^.*$"
+                    },
+                    "operand": {
+                        "$id": "#root/schemas/items/operand",
+                        "title": "Operand",
+                        "type": "object",
+                        "required": [
+                            "jdbcDriver",
+                            "jdbcUrl",
+                            "jdbcUser",
+                            "jdbcPassword",
+                            "location"
+                        ],
+                        "properties": {
+                            "jdbcDriver": {
+                                "$id": "#root/schemas/items/operand/jdbcDriver",
+                                "title": "Jdbcdriver",
+                                "type": "string",
+                                "pattern": "^.*$"
+                            },
+                            "jdbcUrl": {
+                                "$id": "#root/schemas/items/operand/jdbcUrl",
+                                "title": "Jdbcurl",
+                                "type": "string",
+                                "pattern": "^.*$"
+                            },
+                            "jdbcUser": {
+                                "$id": "#root/schemas/items/operand/jdbcUser",
+                                "title": "Jdbcuser",
+                                "type": "string",
+                                "pattern": "^.*$"
+                            },
+                            "jdbcPassword": {
+                                "$id": "#root/schemas/items/operand/jdbcPassword",
+                                "title": "Jdbcpassword",
+                                "type": "string",
+                                "pattern": "^.*$"
+                            },
+                            "location": {
+                                "$id": "#root/schemas/items/operand/location",
+                                "title": "Location",
+                                "type": "string",
+                                "pattern": "^.*$"
+                            }
+                        }
+                    },
+                    "tables": {
+                        "$id": "#root/schemas/items/tables",
+                        "title": "Tables",
+                        "type": "array",
+                        "items": {
+                            "$id": "#root/schemas/items/tables/items",
+                            "title": "Items",
+                            "type": "object",
+                            "required": [
+                                "name",
+                                "type",
+                                "sql"
+                            ],
+                            "properties": {
+                                "name": {
+                                    "$id": "#root/schemas/items/tables/items/name",
+                                    "title": "Name",
+                                    "type": "string",
+                                    "pattern": "^.*$"
+                                },
+                                "type": {
+                                    "$id": "#root/schemas/items/tables/items/type",
+                                    "title": "Type",
+                                    "type": "string",
+                                    "pattern": "^.*$"
+                                },
+                                "sql": {
+                                    "$id": "#root/schemas/items/tables/items/sql",
+                                    "title": "Sql",
+                                    "type": "array",
+                                    "items": {
+                                        "$id": "#root/schemas/items/tables/items/sql/items",
+                                        "title": "Items",
+                                        "type": "string",
+                                        "pattern": "^.*$"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
