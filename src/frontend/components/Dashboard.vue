@@ -13,7 +13,7 @@
                             <!-- [ Database pane ] start -->
                             <div class="col-md-3 m-b-30">
                                 <database-configuration />
-                                <database-navigator />
+                        <!--       <database-navigator />  -->  
                             </div>
                             <!-- [ Database pane ] end -->
 
@@ -42,7 +42,7 @@
 
 <script>
 import DatabaseConfiguration from './DatabaseConfiguration.vue'
-import DatabaseNavigator from './DatabaseNavigator.vue'
+//import DatabaseNavigator from './DatabaseNavigator.vue' 
 import DatabasePolicies from './DatabasePolicies.vue';
 import DatabaseQuery from './DatabaseQuery.vue';
 import DatabaseQueryPlan from './DatabaseQueryPlan.vue';
@@ -52,7 +52,7 @@ export default {
     name: 'Dashboard',
     components: {
         DatabaseConfiguration,
-        DatabaseNavigator,
+       // DatabaseNavigator,
         DatabasePolicies,
         DatabaseQuery,
         DatabaseQueryPlan,

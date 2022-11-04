@@ -7,7 +7,7 @@
         <div v-if="!configuration" class="card-block px-2 py-5 text-center">
             <span>Please load your configuration file</span>
         </div>
-
+<!--
         <div v-if="configuration" class="card-block px-0 py-0">
             <tabs :options="{ useUrlFragment: false }"
                   cache-lifetime="0"
@@ -21,6 +21,7 @@
                 </tab>
             </tabs>
         </div>
+-->
     </div>
 </template>
 
@@ -29,15 +30,15 @@ import 'bootstrap/js/dist/tab';
 import 'bootstrap/js/dist/collapse';
 import { uniq } from 'lodash-es/array';
 import { kebabCase } from 'lodash-es/string';
-import Tab from 'vue3-tabs-component/src/components/Tab.vue';
-import Tabs from 'vue3-tabs-component/src/components/Tabs.vue';
+//import Tab from 'vue3-tabs-component/src/components/Tab.vue';
+//import Tabs from 'vue3-tabs-component/src/components/Tabs.vue';
 import DatabaseNavigatorRelations from './DatabaseNavigatorRelations.vue';
 
 export default {
     name: 'DatabaseNavigator',
     components: {
-        Tab,
-        Tabs,
+      //  Tab,
+      //  Tabs,
         DatabaseNavigatorRelations
     },
     computed: {
@@ -92,7 +93,9 @@ export default {
 </script>
 
 <style scoped>
+/*
 .tab-content > .tab-pane {
     display: unset;
 }
+*/
 </style>

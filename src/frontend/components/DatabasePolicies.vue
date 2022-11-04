@@ -9,7 +9,7 @@
         </div>
 
         <div v-if="configuration" class="card-block px-0 py-0">
-            <tabs :options="{ useUrlFragment: false }"
+          <!--  <tabs :options="{ useUrlFragment: false }"
                   cache-lifetime="0"
                   nav-class="nav nav-tabs"
                   nav-item-class="nav-item"
@@ -80,6 +80,7 @@
                     </div>
                 </tab>
             </tabs>
+        -->
         </div>
     </div>
 </template>
@@ -89,8 +90,8 @@ import axios from 'axios';
 import { uniq } from 'lodash-es/array';
 import { kebabCase } from 'lodash-es/string';
 import Editor from './Editor.vue';
-import Tab from 'vue3-tabs-component/src/components/Tab.vue';
-import Tabs from 'vue3-tabs-component/src/components/Tabs.vue';
+//import Tab from 'vue3-tabs-component/src/components/Tab.vue';
+//import Tabs from 'vue3-tabs-component/src/components/Tabs.vue';
 
 export default {
     name: 'DatabasePolicies',
@@ -104,17 +105,19 @@ export default {
         }
     },
     components: {
-        Tab,
-        Tabs,
+       // Tab,
+       // Tabs,
         Editor
     },
     computed: {
         configuration() {
             return this.$store.getters.configuration;
         },
+        /*
         tabs() {
             return this.getTabsFromSchemas(this.configuration.schemas);
         }
+        */
     },
     methods: {
         getLocations(schemas, includeAll = true) {
@@ -232,6 +235,7 @@ export default {
                     alert(error);
                 });
         },
+        /*
         addPolicy(tab, event) {
             if (!event.target.closest('form').reportValidity()) return;
             event.target.classList.add('disabled');
@@ -265,6 +269,7 @@ export default {
             delete this.newPolicyDataConstraints[tabID];
             this.newPolicyKeys[tabID] = Math.random();
         }
+        */
     }
 }
 </script>

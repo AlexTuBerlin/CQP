@@ -14,7 +14,6 @@
         "lodash-es": "^4.17",
         "popper.js": "^1.16",
         "vue": "^3.0",
-        "vue3-tabs-component": "^1.1.1",
         "vuex": "^4.0"
     },
     "devDependencies": {
