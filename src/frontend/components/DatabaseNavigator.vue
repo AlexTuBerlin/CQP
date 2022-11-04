@@ -29,8 +29,7 @@ import 'bootstrap/js/dist/tab';
 import 'bootstrap/js/dist/collapse';
 import { uniq } from 'lodash-es/array';
 import { kebabCase } from 'lodash-es/string';
-import Tab from 'vue3-tabs-component/src/components/Tab.vue';
-import Tabs from 'vue3-tabs-component/src/components/Tabs.vue';
+import {Tabs, Tab} from 'vue3-tabs-component';
 import DatabaseNavigatorRelations from './DatabaseNavigatorRelations.vue';
 
 export default {

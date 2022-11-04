@@ -89,8 +89,7 @@ import axios from 'axios';
 import { uniq } from 'lodash-es/array';
 import { kebabCase } from 'lodash-es/string';
 import Editor from './Editor.vue';
-import Tab from 'vue3-tabs-component/src/components/Tab.vue';
-import Tabs from 'vue3-tabs-component/src/components/Tabs.vue';
+import {Tabs, Tab} from 'vue3-tabs-component';
 
 export default {
     name: 'DatabasePolicies',

@@ -1,0 +1,32 @@
+.nodeClass {
+    text-align: center;
+    vertical-align: middle;
+    cursor: default;
+    padding: 0 !important;
+    width: 100px !important;
+    border: 0;
+    overflow: hidden;
+    background: #ffffff;
+    color: #007bff;
+}
+
+.nodeClass .query-plan-operator {
+    border: 1px solid #04a9f5;
+    color: inherit;
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    user-select: none;
+}
+
+.nodeClass .query-plan-operator.has-popover {
+    cursor: pointer;
+}
+
+.selectedNodeClass .query-plan-operator.has-popover {
+    border: 1px solid #e38493;
+    background: #e38493;
+    color: #59353a;
+}
